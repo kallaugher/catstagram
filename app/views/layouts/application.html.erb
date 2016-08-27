@@ -10,15 +10,20 @@
 
   <body>
     <div class="logobox">
+      <!-- header -->
       <h1><%= image_tag("cat_icon2.gif", :alt => "cat icon") %> Catstagram</h1>
+      <!-- nav -->
       <ul class="nav nav-tabs">
-        <li role="presentation"><a href="#" class="nav">Home</a></li>
-        <li role="presentation"><a href="#">Log-In</a></li>
-        <li role="presentation"><a href="#">Sign-Up</a></li>
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/login">Log-In</a></li>
+        <li role="presentation"><a href="/signup">Sign-Up</a></li>
+        <li role="presentation" class="pull-right"><a href="/signup">Hi Cliff!</a></li>
       </ul>
+<br><br>
       <br>
       <br>
       <%= yield %>
     </div>
+
   </body>
 </html>
