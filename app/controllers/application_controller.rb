@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  helper_method :current_user, :authorize_user
+  helper_method :current_user, :authorize_user, :logged_in?
 
 
    def current_user
