@@ -1,0 +1,28 @@
+
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-xs-6 col-md-3">
+    <span class="thumbnail">
+      <img src="<%= @photo.file %>">
+    </span>
+    <button type="button" class="btn btn-default btn-lg">
+      <i class="icon-heart"></i> Vote
+    </button>
+  </div>
+  <div class="col-md-4">
+
+        "<%= @photo.caption %>"<br>
+        Posted by <%= @photo.user.name %><br>
+        <%= @photo.votes %> votes<br>
+
+
+  </div>
+</div>
