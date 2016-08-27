@@ -11,7 +11,8 @@
   <div class="col-md-2"></div>
   <div class="col-xs-6 col-md-3">
     <span class="thumbnail">
-      <img src="<%= @photo.file %>">
+      <img src="<%= @photo.image.url(:medium) %>">
+      <% image_tag(@photo.image.url(:medium)) %>
     </span>
     <button type="button" class="btn btn-default btn-lg">
       <i class="icon-heart"></i> Vote

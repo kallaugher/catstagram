@@ -15,7 +15,6 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.create(photo_params)
-    binding.pry
     redirect_to photo_path(@photo)
   end
 
@@ -26,6 +25,6 @@ class PhotosController < ApplicationController
   end
 
   def photo_params
-    params.require(:photo).permit(:image, :caption)
+    params.require(:photo).permit(:image, :caption, :user_id)
   end
 end
