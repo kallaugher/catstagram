@@ -1,6 +1,5 @@
-class RegistrarsController < ApplicationController
-  before_action :authorize_user, only:[:show, :edit, :update, :destroy]
- 
+class RegistrationsController < ApplicationController
+  
   def new
     @user = User.new
   end
@@ -11,7 +10,7 @@ class RegistrarsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user_path(user)
      else
-       render '/users/new'
+       render :new
     end
   end
 
@@ -21,6 +20,6 @@ class RegistrarsController < ApplicationController
 
 
   def user_params
-    params.require(:user).permit(:name, :bio, :photo)
+    params.require(:user).permit(:name, :bio, :photo,:password)
   end
 end

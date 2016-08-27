@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826221957) do
+ActiveRecord::Schema.define(version: 20160827212219) do
 
   create_table "photo_tags", force: :cascade do |t|
     t.integer  "tag_id"
@@ -38,8 +38,9 @@ ActiveRecord::Schema.define(version: 20160826221957) do
     t.string   "name"
     t.string   "bio"
     t.string   "photo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
 end
