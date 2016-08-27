@@ -9,6 +9,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="logobox">
+      <h1><%= image_tag("cat_icon2.gif", :alt => "cat icon") %> Catstagram</h1>
+      <ul class="nav nav-tabs">
+        <li role="presentation"><a href="#" class="nav">Home</a></li>
+        <li role="presentation"><a href="#">Log-In</a></li>
+        <li role="presentation"><a href="#">Sign-Up</a></li>
+      </ul>
+      <br>
+      <br>
+      <%= yield %>
+    </div>
   </body>
 </html>
