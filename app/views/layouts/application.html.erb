@@ -10,7 +10,6 @@
   </head>
 
   <body>
-
     <div class="logobox">
       <!-- header -->
       <h1><%= image_tag("cat_icon2.gif", :alt => "cat icon") %> Catstagram</h1>
@@ -19,6 +18,7 @@
         <li role="presentation"><a href="/">Home</a></li>
         <% if logged_in? %>
           <li role="presentation"><a href="/logout">Log-Out</a></li>
+          <li role="presentation"><a href="/photos/new">Add a Cat</a></li>
           <li role="presentation" class="pull-right">Hi <%= link_to "#{current_user.name}".capitalize, user_path(current_user) %> </li>
         <% else %>
           <li role="presentation"><a href="/login">Log-In</a></li>
