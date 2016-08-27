@@ -12,9 +12,19 @@ class PhotosController < ApplicationController
     @photo = Photo.new
   end
 
+  def create
+    @photo = Photo.create(photo_params)
+    binding.pry
+    redirect_to photo_path(@photo)
+  end
+
   private
 
   def set_photo
     @photo = Photo.find(params[:id])
+  end
+
+  def photo_params
+    params.require(:photo).permit(:image, :caption)
   end
 end
