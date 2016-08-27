@@ -14,9 +14,8 @@ class ApplicationController < ActionController::Base
   
    def authorize_user
      if !logged_in?
-       flash[:notice] = "You need to log in"
-     redirect_to '/'
-    end
+      redirect_to '/'
+     end
    end
 
 

@@ -10,15 +10,20 @@
   </head>
 
   <body>
+
     <div class="logobox">
       <!-- header -->
       <h1><%= image_tag("cat_icon2.gif", :alt => "cat icon") %> Catstagram</h1>
       <!-- nav -->
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="/">Home</a></li>
-        <li role="presentation"><a href="/login">Log-In</a></li>
-        <li role="presentation"><a href="/signup">Sign-Up</a></li>
-        <li role="presentation" class="pull-right"><a href="/signup">Hi Cliff!</a></li>
+        <% if logged_in? %>
+          <li role="presentation"><a href="/logout">Log-Out</a></li>
+          <li role="presentation" class="pull-right">Hi <%= link_to "#{current_user.name}".capitalize, user_path(current_user) %> </li>
+        <% else %>
+          <li role="presentation"><a href="/login">Log-In</a></li>
+          <li role="presentation"><a href="/signup">Sign-Up</a></li>
+        <% end %>
       </ul>
 <br><br>
       <br>
