@@ -9,6 +9,10 @@ class PhotosController < ApplicationController
   def show
   end
 
+  def new
+    @photo = Photo.new
+  end
+
   private
 
   def set_photo

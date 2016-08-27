@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160827212219) do
+=======
+ActiveRecord::Schema.define(version: 20160827212156) do
+>>>>>>> edcee098a1e425352f8da6276df98c27e5f87605
 
   create_table "photo_tags", force: :cascade do |t|
     t.integer  "tag_id"
@@ -24,8 +28,12 @@ ActiveRecord::Schema.define(version: 20160827212219) do
     t.string   "file"
     t.integer  "user_id"
     t.integer  "votes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "tags", force: :cascade do |t|
