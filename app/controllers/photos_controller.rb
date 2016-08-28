@@ -5,16 +5,19 @@ class PhotosController < ApplicationController
   def index
     @photos = Photo.all
   end
+  
+   def show
+   end
 
   def add_vote
-    self.votes += 1
-  end
-
-  def show
-   count=@photo.votes+1
+   @photo = Photo.find(params[:id])
+   count=@photo.votes+=1
    @photo.update_attributes(:votes => count)
-  end
+   redirect_to photo_path(@photo)
 
+  end
+   def show
+   end
 
   def new
     @photo = Photo.new

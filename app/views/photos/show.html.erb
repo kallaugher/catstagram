@@ -4,21 +4,17 @@
     <span class="thumbnail">
       <img src="<%= @photo.image.url(:medium) %>">
     </span>
-    
-
-<%= link_to photo_path(@photo) do %> 
-<i class="icon-heart"> Vote</i>
-<%end%>
-<%=@photo.votes %>
-
-
+  <%= link_to "Vote", photo_vote_path(:id => @photo.id), method: :post%>
+    <i class="icon-heart" > </i>
+  <%=@photo.votes %>
   </div>
+
   <div class="col-md-4">
-        "<%= @photo.caption %>"<br>
-        Posted by <%= @photo.user.name %><br><br>
-        Tags: <% @photo.tags.each do |tag| %>
-          <span class="label label-default"><%= tag.name %></span>
-        <% end %><br><br>
-        <%= @photo.votes %> votes<br>
+    "<%= @photo.caption %>"<br>
+    Posted by <%= @photo.user.name %><br><br>
+    Tags: <% @photo.tags.each do |tag| %>
+      <span class="label label-default"><%= tag.name %></span>
+    <% end %><br><br>
+    <%= @photo.votes %> votes<br>
   </div>
 </div>
