@@ -17,7 +17,7 @@
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="/">Home</a></li>
         <% if logged_in? %>
-          <li role="presentation"><a href="/logout">Log-Out</a></li>
+          <li role="presentation"> <%= link_to "Log-Out", signout_path, method: :delete %> </li>
           <li role="presentation"><a href="/photos/new">Add a Cat</a></li>
           <li role="presentation" class="pull-right">Hi <%= link_to "#{current_user.name}".capitalize, user_path(current_user) %> </li>
         <% else %>
