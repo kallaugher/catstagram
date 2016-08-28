@@ -3,13 +3,11 @@
   <div class="col-xs-6 col-md-3">
     <span class="thumbnail">
       <img src="<%= @photo.image.url(:medium) %>">
-      <% image_tag(@photo.image.url(:medium)) %>
     </span>
     <a href="/photos/add_vote" class="btn btn-default btn-lg" role="button">
       <i class="icon-heart"></i> Vote
     </button>
   </div>
- 
   <div class="col-md-4">
         "<%= @photo.caption %>"<br>
         Posted by <%= @photo.user.name %><br>
