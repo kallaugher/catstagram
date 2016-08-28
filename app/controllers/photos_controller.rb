@@ -18,6 +18,10 @@ class PhotosController < ApplicationController
     redirect_to photo_path(@photo)
   end
 
+  def add_vote
+    self.vote += 1
+  end
+
   private
 
   def set_photo

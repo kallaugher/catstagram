@@ -1,5 +1,7 @@
+
 Started GET "/photos" for ::1 at 2016-08-27 18:18:31 -0400
-  
+
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -7,7 +9,7 @@ Migrations are pending. To resolve this issue, run:
 	bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
 activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -42,6 +44,29 @@ puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+<<<<<<< HEAD
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/" for ::1 at 2016-08-27 19:43:35 -0400
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+=======
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -95,10 +120,11 @@ Completed 200 OK in 471ms (Views: 407.9ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/login" for ::1 at 2016-08-27 18:18:56 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
@@ -123,6 +149,226 @@ puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+<<<<<<< HEAD
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (172.2ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.1ms)
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /Users/cregis/.rvm/gems/ruby-2.3.0/bin/rake:22)
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTags (20160826205733)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160826205733"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20160826210026)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "bio" varchar, "photo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160826210026"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePhotos (20160826221933)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "caption" varchar, "file" varchar, "user_id" integer, "votes" integer, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160826221933"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePhotoTags (20160826221957)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "photo_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "photo_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160826221957"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnPasswordDigestToUsers (20160827212219)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160827212219"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-08-28 00:28:38 UTC], ["updated_at", 2016-08-28 00:28:38 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2016-08-27 20:29:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 750ms (ActiveRecord: 1.9ms)
+
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/application_controller.rb:12:in `logged_in?'
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__3959766024058226904_70102372717740'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.8ms)
+Started GET "/" for ::1 at 2016-08-27 20:30:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+Started GET "/" for ::1 at 2016-08-27 20:30:32 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (9.9ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (102.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 682ms (ActiveRecord: 1.4ms)
+
+
+
+Completed 500 Internal Server Error in 629ms (ActiveRecord: 1.0ms)
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+app/controllers/application_controller.rb:8:in `current_user'
+
+app/controllers/application_controller.rb:12:in `logged_in?'
+app/controllers/application_controller.rb:8:in `current_user'
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___2041911018665935011_70309118707180'
+app/controllers/application_controller.rb:12:in `logged_in?'
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___2041911018665935011_70309118707180'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (124.1ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (171.8ms)
+Started GET "/" for ::1 at 2016-08-27 20:31:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 707ms (ActiveRecord: 2.3ms)
+
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+
+app/controllers/application_controller.rb:8:in `current_user'
+app/controllers/application_controller.rb:12:in `logged_in?'
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__2226631664488021465_70356699092080'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.6ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.3ms)
+Started GET "/" for ::1 at 2016-08-27 20:32:47 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for ::1 at 2016-08-27 20:33:04 -0400
+Processing by RegistrationsController#new as HTML
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 82ms (Views: 68.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signup" for ::1 at 2016-08-27 20:33:22 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bSD/0WM+IcpQj/TpzHZFRhArnDokPEyG6Yr2mGGrxAucdVP8Qb84sHvsJBy9auCpSJgEBII6YUUNjJZvXnM8Qg==", "user"=>{"name"=>"doug", "bio"=>"my cat", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "doug"], ["bio", "my cat"], ["created_at", 2016-08-28 00:33:22 UTC], ["updated_at", 2016-08-28 00:33:22 UTC], ["password_digest", "$2a$10$YIunud0RUVEYvzqqkdPDaeBkAek9i0GM596JPXNli.li/OIyl9g2q"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 92ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/users/1" for ::1 at 2016-08-27 20:33:22 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 28.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-27 20:34:51 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for ::1 at 2016-08-27 20:34:59 -0400
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 47ms (Views: 31.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/photos" for ::1 at 2016-08-27 20:35:52 -0400
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DD42bIHsL4D6wSl8oRRI3DaJfvfvkhDzPZ3aEcA+7AAqJO818Eo7aFwE/UL1HdOD8YFFHTqtIxIsA8dymHFFOQ==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007ffa65467668 @tempfile=#<Tempfile:/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/RackMultipart20160827-2376-a526nk.jpg>, @original_filename="sunset pic.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"sunset pic.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"wait for a cat at sunset"}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/dba516fc3ae5b8e94d70501ef153b34f20160827-2376-136qt5f.jpg'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for ::1 at 2016-08-27 20:37:32 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 105.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for ::1 at 2016-08-27 20:37:34 -0400
+
+ActionController::RoutingError (No route matches [GET] "/logout"):
+=======
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
@@ -142,9 +388,10 @@ Completed 200 OK in 53ms (Views: 47.0ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/login" for ::1 at 2016-08-27 18:19:21 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/login"):
-  
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -170,6 +417,22 @@ puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+<<<<<<< HEAD
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [22 times] (26.3ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (23.5ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.4ms)
+Started GET "/logout" for ::1 at 2016-08-27 20:38:26 -0400
+
+ActionController::RoutingError (No route matches [GET] "/logout"):
+
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+=======
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
@@ -193,14 +456,14 @@ Processing by SessionsController#new as HTML
 Completed 406 Not Acceptable in 39ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -250,6 +513,7 @@ actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
@@ -274,6 +538,22 @@ puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+<<<<<<< HEAD
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [22 times] (12.7ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (119.5ms)
+Started GET "/logout" for ::1 at 2016-08-27 20:38:32 -0400
+
+ActionController::RoutingError (No route matches [GET] "/logout"):
+
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+=======
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -289,14 +569,14 @@ Processing by SessionsController#new as HTML
 Completed 406 Not Acceptable in 74ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -346,6 +626,7 @@ actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
@@ -370,6 +651,35 @@ puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+<<<<<<< HEAD
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [22 times] (9.4ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.2ms)
+Completed   in 168893ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-27 20:39:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 713ms (Views: 651.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/signout" for ::1 at 2016-08-27 20:39:09 -0400
+
+ActionController::RoutingError (No route matches [GET] "/signout"):
+
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+=======
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
 Started GET "/signin" for ::1 at 2016-08-27 18:19:54 -0400
@@ -377,14 +687,14 @@ Processing by SessionsController#new as HTML
 Completed 406 Not Acceptable in 43ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -434,6 +744,7 @@ actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
@@ -458,6 +769,22 @@ puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+<<<<<<< HEAD
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [22 times] (8.5ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (38.5ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (151.7ms)
+Started GET "/signout" for ::1 at 2016-08-27 20:41:10 -0400
+
+ActionController::RoutingError (No route matches [GET] "/signout"):
+
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+=======
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -481,14 +808,14 @@ Processing by SessionsController#new as HTML
 Completed 406 Not Acceptable in 62ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -538,6 +865,7 @@ actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
@@ -562,6 +890,21 @@ puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+<<<<<<< HEAD
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered collection of /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [22 times] (10.1ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (117.8ms)
+Started GET "/signout" for ::1 at 2016-08-27 20:47:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/signout"):
+=======
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -573,9 +916,10 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.3ms)
 Started GET "/signup" for ::1 at 2016-08-27 18:21:05 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/signup"):
-  
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -601,6 +945,46 @@ puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+<<<<<<< HEAD
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered collection of /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [22 times] (8.9ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (23.8ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.9ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (186.1ms)
+Started GET "/" for ::1 at 2016-08-27 20:47:25 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (2.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 670ms (Views: 622.9ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/signout" for ::1 at 2016-08-27 20:50:41 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DHf4jfKgCbz7qGyU4vyRWkhRhq07s/Zwecl0Y8aK9Mij8anoDj1A5Kd621o8dMIJdwQkepH1mUw0EJxqRzR6gQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-27 20:50:41 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (2.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 74ms (Views: 66.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/login" for ::1 at 2016-08-27 20:50:59 -0400
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+=======
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
@@ -627,9 +1011,9 @@ Processing by RegistrationsController#create as HTML
 Completed 500 Internal Server Error in 171ms (ActiveRecord: 5.7ms)
 
 
-  
+
 NoMethodError (undefined method `user_path' for #<RegistrationsController:0x007fdf9f0809b8>):
-  
+
 app/controllers/registrations_controller.rb:11:in `create'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -663,14 +1047,14 @@ Processing by UsersController#show as HTML
 Completed 406 Not Acceptable in 70ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionController::UnknownFormat (UsersController#show is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -720,6 +1104,7 @@ actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
@@ -744,6 +1129,40 @@ puma (3.6.0) lib/puma/configuration.rb:225:in `call'
 puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
 puma (3.6.0) lib/puma/server.rb:415:in `process_client'
 puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+<<<<<<< HEAD
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered collection of /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [22 times] (8.3ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (124.6ms)
+Started GET "/" for ::1 at 2016-08-27 20:51:03 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-27 20:51:08 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-27 20:52:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 583ms (Views: 531.5ms | ActiveRecord: 0.6ms)
+=======
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
 puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -807,9 +1226,9 @@ Completed 200 OK in 128ms (Views: 116.1ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/logout" for ::1 at 2016-08-27 18:33:25 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/logout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -854,9 +1273,9 @@ Completed 200 OK in 63ms (Views: 55.9ms | ActiveRecord: 0.5ms)
 
 
 Started GET "/logout" for ::1 at 2016-08-27 18:33:30 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/logout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -893,9 +1312,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (132.0ms)
 Started GET "/logout" for ::1 at 2016-08-27 18:34:49 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/logout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -933,9 +1352,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (271.8ms)
 Started GET "/logout" for ::1 at 2016-08-27 18:35:10 -0400
   [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
+
 ActionController::RoutingError (No route matches [GET] "/logout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -972,9 +1391,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.9ms)
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (230.0ms)
 Started GET "/logout" for ::1 at 2016-08-27 18:35:13 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/logout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1019,9 +1438,9 @@ Completed 200 OK in 496ms (Views: 401.0ms | ActiveRecord: 1.6ms)
 
 
 Started GET "/signout" for ::1 at 2016-08-27 18:35:22 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/signout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1066,9 +1485,9 @@ Completed 200 OK in 82ms (Views: 75.0ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/signout" for ::1 at 2016-08-27 18:35:44 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/signout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1113,9 +1532,9 @@ Completed 200 OK in 117ms (Views: 107.5ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/signout" for ::1 at 2016-08-27 18:35:59 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/signout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1160,9 +1579,9 @@ Completed 200 OK in 160ms (Views: 120.8ms | ActiveRecord: 2.4ms)
 
 
 Started GET "/signout" for ::1 at 2016-08-27 18:36:17 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/signout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1206,7 +1625,7 @@ Processing by PhotosController#new as HTML
 Completed 500 Internal Server Error in 350ms (ActiveRecord: 4.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `signout_path' for #<#<Class:0x007fe2c48d6158>:0x007fe2c738b998>):
     17:       <ul class="nav nav-tabs">
     18:         <li role="presentation"><a href="/">Home</a></li>
@@ -1215,7 +1634,7 @@ ActionView::Template::Error (undefined local variable or method `signout_path' f
     21:           <li role="presentation"><a href="/photos/new">Add a Cat</a></li>
     22:           <li role="presentation" class="pull-right"><%= link_to "Hi #{current_user.name.capitalize}", user_path(current_user) %> </li>
     23:         <% else %>
-  
+
 app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___3599534134866107606_70305990852860'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1261,14 +1680,14 @@ Processing by SessionsController#new as HTML
 Completed 406 Not Acceptable in 81ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -1380,14 +1799,14 @@ Processing by SessionsController#new as HTML
 Completed 406 Not Acceptable in 63ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -1503,14 +1922,14 @@ Processing by UsersController#show as HTML
 Completed 406 Not Acceptable in 95ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionController::UnknownFormat (UsersController#show is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -1628,14 +2047,14 @@ Processing by UsersController#show as HTML
 Completed 406 Not Acceptable in 144ms (ActiveRecord: 4.0ms)
 
 
-  
+
 ActionController::UnknownFormat (UsersController#show is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -1813,7 +2232,7 @@ Processing by PhotosController#show as HTML
 Completed 500 Internal Server Error in 84ms (ActiveRecord: 2.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `attachment' for #<Photo:0x007ff4d210c128>):
     11:   <div class="col-md-2"></div>
     12:   <div class="col-xs-6 col-md-3">
@@ -1822,7 +2241,7 @@ ActionView::Template::Error (undefined method `attachment' for #<Photo:0x007ff4d
     15:     </span>
     16:     <button type="button" class="btn btn-default btn-lg">
     17:       <i class="icon-heart"></i> Vote
-  
+
 app/views/photos/show.html.erb:14:in `_app_views_photos_show_html_erb__1162815400383976658_70344736552360'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1854,7 +2273,7 @@ Processing by PhotosController#show as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `attachment' for #<Photo:0x007ff4d20cbd08>):
     11:   <div class="col-md-2"></div>
     12:   <div class="col-xs-6 col-md-3">
@@ -1863,7 +2282,7 @@ ActionView::Template::Error (undefined method `attachment' for #<Photo:0x007ff4d
     15:     </span>
     16:     <button type="button" class="btn btn-default btn-lg">
     17:       <i class="icon-heart"></i> Vote
-  
+
 app/views/photos/show.html.erb:14:in `_app_views_photos_show_html_erb__1162815400383976658_70344736395500'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1905,7 +2324,7 @@ Processing by PhotosController#show as HTML
 Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `attachment' for #<Photo:0x007ff4d14fd5a8>):
     11:   <div class="col-md-2"></div>
     12:   <div class="col-xs-6 col-md-3">
@@ -1914,7 +2333,7 @@ ActionView::Template::Error (undefined method `attachment' for #<Photo:0x007ff4d
     15:     </span>
     16:     <button type="button" class="btn btn-default btn-lg">
     17:       <i class="icon-heart"></i> Vote
-  
+
 app/views/photos/show.html.erb:14:in `_app_views_photos_show_html_erb__1162815400383976658_70344730206220'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1936,9 +2355,9 @@ Completed 200 OK in 149ms (Views: 115.3ms | ActiveRecord: 1.9ms)
 
 
 Started GET "/system/photos/images/000/000/002/medium/simon1.jpg?1472339313" for ::1 at 2016-08-27 19:09:56 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/system/photos/images/000/000/002/medium/simon1.jpg"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -1984,7 +2403,7 @@ Processing by PhotosController#show as HTML
 Completed 500 Internal Server Error in 78ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `attachment' for #<Photo:0x007ff4d35867c0>):
     12:   <div class="col-xs-6 col-md-3">
     13:     <span class="thumbnail">
@@ -1993,7 +2412,7 @@ ActionView::Template::Error (undefined method `attachment' for #<Photo:0x007ff4d
     16:     </span>
     17:     <button type="button" class="btn btn-default btn-lg">
     18:       <i class="icon-heart"></i> Vote
-  
+
 app/views/photos/show.html.erb:15:in `_app_views_photos_show_html_erb__1162815400383976658_70344747264160'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2009,9 +2428,9 @@ Processing by PhotosController#show as HTML
 Completed 500 Internal Server Error in 34ms (ActiveRecord: 4.2ms)
 
 
-  
+
 NoMethodError (undefined method `attachment' for #<Class:0x007ff4cee14d88>):
-  
+
 app/models/photo.rb:6:in `<class:Photo>'
 app/models/photo.rb:1:in `<top (required)>'
 app/controllers/photos_controller.rb:24:in `set_photo'
@@ -2040,7 +2459,7 @@ Processing by PhotosController#show as HTML
 Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `attachment' for #<Paperclip::Attachment:0x007ff4d2629a70>):
     12:   <div class="col-xs-6 col-md-3">
     13:     <span class="thumbnail">
@@ -2049,7 +2468,7 @@ ActionView::Template::Error (undefined method `attachment' for #<Paperclip::Atta
     16:     </span>
     17:     <button type="button" class="btn btn-default btn-lg">
     18:       <i class="icon-heart"></i> Vote
-  
+
 app/views/photos/show.html.erb:15:in `_app_views_photos_show_html_erb__1162815400383976658_70344728326360'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2102,7 +2521,7 @@ Processing by PhotosController#show as HTML
 Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `attachment' for #<Paperclip::Attachment:0x007f80d44fd218>):
     12:   <div class="col-xs-6 col-md-3">
     13:     <span class="thumbnail">
@@ -2111,7 +2530,7 @@ ActionView::Template::Error (undefined method `attachment' for #<Paperclip::Atta
     16:     </span>
     17:     <button type="button" class="btn btn-default btn-lg">
     18:       <i class="icon-heart"></i> Vote
-  
+
 app/views/photos/show.html.erb:15:in `_app_views_photos_show_html_erb__1809780586729261430_70095691384640'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2132,7 +2551,7 @@ Processing by PhotosController#show as HTML
 Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `attachment' for #<Paperclip::Attachment:0x007f80d9a7dcd8>):
     12:   <div class="col-xs-6 col-md-3">
     13:     <span class="thumbnail">
@@ -2141,7 +2560,7 @@ ActionView::Template::Error (undefined method `attachment' for #<Paperclip::Atta
     16:     </span>
     17:     <button type="button" class="btn btn-default btn-lg">
     18:       <i class="icon-heart"></i> Vote
-  
+
 app/views/photos/show.html.erb:15:in `_app_views_photos_show_html_erb__1809780586729261430_70095647822360'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2159,7 +2578,7 @@ Processing by PhotosController#new as HTML
 Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.7ms)
 
 
-  
+
 SyntaxError (/Users/kallaugher/Development/catstagram/app/views/photos/new.html.erb:3: syntax error, unexpected tLABEL
 ...ppend=  form_for(@photo), html: { multipart: true } do |f| @...
 ...                               ^
@@ -2167,7 +2586,7 @@ SyntaxError (/Users/kallaugher/Development/catstagram/app/views/photos/new.html.
 ...), html: { multipart: true } do |f| @output_buffer.safe_appe...
 ...                               ^
 /Users/kallaugher/Development/catstagram/app/views/photos/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input):
-  
+
 app/views/photos/new.html.erb:3: syntax error, unexpected tLABEL
 app/views/photos/new.html.erb:3: syntax error, unexpected keyword_do_block, expecting keyword_end
 app/views/photos/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
@@ -2212,7 +2631,7 @@ Processing by PhotosController#show as HTML
 Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `attachment' for #<Paperclip::Attachment:0x007f80d2c4a590>):
     12:   <div class="col-xs-6 col-md-3">
     13:     <span class="thumbnail">
@@ -2221,7 +2640,7 @@ ActionView::Template::Error (undefined method `attachment' for #<Paperclip::Atta
     16:     </span>
     17:     <button type="button" class="btn btn-default btn-lg">
     18:       <i class="icon-heart"></i> Vote
-  
+
 app/views/photos/show.html.erb:15:in `_app_views_photos_show_html_erb__1809780586729261430_70095634613480'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2290,9 +2709,9 @@ Processing by PhotosController#show as HTML
 Completed 404 Not Found in 75ms (ActiveRecord: 3.6ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Photo with 'id'=4):
-  
+
 app/controllers/photos_controller.rb:24:in `set_photo'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2311,9 +2730,9 @@ Processing by PhotosController#index as HTML
 Completed 500 Internal Server Error in 427ms (ActiveRecord: 4.0ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
-  
+
 app/controllers/application_controller.rb:8:in `current_user'
 app/controllers/application_controller.rb:12:in `logged_in?'
 app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1553633370048309668_70186838568820'
@@ -2334,9 +2753,9 @@ Processing by PhotosController#index as HTML
 Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
-  
+
 app/controllers/application_controller.rb:8:in `current_user'
 app/controllers/application_controller.rb:12:in `logged_in?'
 app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1553633370048309668_70186865530880'
@@ -2353,14 +2772,14 @@ Processing by SessionsController#new as HTML
 Completed 406 Not Acceptable in 72ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2445,9 +2864,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.1ms)
 Started GET "/signout" for ::1 at 2016-08-27 19:29:17 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/signout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2492,9 +2911,9 @@ Processing by PhotosController#index as HTML
 Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
-  
+
 app/controllers/application_controller.rb:8:in `current_user'
 app/controllers/application_controller.rb:12:in `logged_in?'
 app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb___1553633370048309668_70186865147720'
@@ -2511,14 +2930,14 @@ Processing by SessionsController#new as HTML
 Completed 406 Not Acceptable in 42ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2603,9 +3022,9 @@ puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
   Rendered /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.1ms)
 Started GET "/signout" for ::1 at 2016-08-27 19:29:32 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/signout"):
-  
+
 actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
 web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2654,14 +3073,14 @@ Processing by SessionsController#new as HTML
 Completed 406 Not Acceptable in 96ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -2812,7 +3231,7 @@ Processing by PhotosController#show as HTML
 Completed 500 Internal Server Error in 35ms (ActiveRecord: 7.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `attachment' for #<Paperclip::Attachment:0x007fab51adfc38>):
     12:   <div class="col-xs-6 col-md-3">
     13:     <span class="thumbnail">
@@ -2821,7 +3240,7 @@ ActionView::Template::Error (undefined method `attachment' for #<Paperclip::Atta
     16:     </span>
     17:     <button type="button" class="btn btn-default btn-lg">
     18:       <i class="icon-heart"></i> Vote
-  
+
 app/views/photos/show.html.erb:15:in `_app_views_photos_show_html_erb__218074181587929354_70186893206200'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2862,7 +3281,7 @@ Processing by PhotosController#index as HTML
 Completed 500 Internal Server Error in 334ms (ActiveRecord: 1.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `image' for #<#<Class:0x007fab4c04de28>:0x007fab4ad1dd08>):
     2:   <% @photos.each do |photo| %>
     3:   <div class="col-xs-6 col-md-3">
@@ -2871,7 +3290,7 @@ ActionView::Template::Error (undefined local variable or method `image' for #<#<
     6:     </a>
     7:   </div>
     8:   <% end %>
-  
+
 app/views/photos/index.html.erb:5:in `block in _app_views_photos_index_html_erb___2516934535634894939_70186835752340'
 app/views/photos/index.html.erb:2:in `_app_views_photos_index_html_erb___2516934535634894939_70186835752340'
   Rendering /Users/kallaugher/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -2889,8 +3308,10 @@ Processing by PhotosController#index as HTML
   Rendered photos/index.html.erb within layouts/application (57.4ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 332ms (Views: 285.4ms | ActiveRecord: 4.6ms)
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
 
 
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2016-08-27 19:35:15 -0400
 Processing by PhotosController#index as HTML
   Rendering photos/index.html.erb within layouts/application
@@ -2920,3 +3341,83 @@ Processing by PhotosController#index as HTML
 Completed 200 OK in 724ms (Views: 522.8ms | ActiveRecord: 13.4ms)
 
 
+=======
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToPhotos (20160827232713)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentImageToPhotos < ActiveRecord::Migration[4.2] (called from load at /Users/cregis/.rvm/gems/ruby-2.3.0/bin/rake:22)
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "photos" ADD "image_file_name" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToPhotos (20160827232713)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentImageToPhotos < ActiveRecord::Migration[4.2] (called from load at /Users/cregis/.rvm/gems/ruby-2.3.0/bin/rake:22)
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "photos" ADD "image_file_name" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for ::1 at 2016-08-27 21:49:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToPhotos (20160827232713)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentImageToPhotos < ActiveRecord::Migration[4.2] (called from load at /Users/cregis/.rvm/gems/ruby-2.3.0/bin/rake:22)
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "photos" ADD "image_file_name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+>>>>>>> 6b9cc6f1a635f0a35ca17566de259d6d49bfedc1

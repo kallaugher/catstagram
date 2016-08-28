@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20160827212219) do
+=======
 ActiveRecord::Schema.define(version: 20160827232713) do
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
 
   create_table "photo_tags", force: :cascade do |t|
     t.integer  "tag_id"
