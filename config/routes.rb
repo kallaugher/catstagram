@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get '/signup', to: 'registrations#new',  as: 'signup'
 
   post '/signup', to: 'registrations#create'
-
+  post 'photos/:id/add_vote' => 'photos#add_vote', :as => :photo_vote
 end
