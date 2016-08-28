@@ -5,7 +5,11 @@ class PhotosController < ApplicationController
   def index
     @photos = Photo.all
   end
-
+  
+  def add_vote
+    self.votes += 1
+  end
+  
   def show
   end
 
@@ -16,10 +20,6 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.create(photo_params)
     redirect_to photo_path(@photo)
-  end
-
-  def add_vote
-    self.vote += 1
   end
 
   private

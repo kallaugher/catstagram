@@ -4,7 +4,7 @@ class CreatePhotos < ActiveRecord::Migration[5.0]
       t.string :caption
       t.string :file
       t.integer :user_id
-      t.integer :votes
+      t.integer :votes, :default => 0
 
       t.timestamps
     end
