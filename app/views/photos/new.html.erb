@@ -1,11 +1,13 @@
 <h3>Add a Cat Photo</h3>
 
-<%= form_for(@photo) do |f| %>
+<%= form_for@photo, html: { multipart: true } do |f| %>
 
   <%= f.file_field :image %><br>
 
   <%= f.label :caption %>
   <%= f.text_field :caption %><br><br>
+
+  <%= f.hidden_field :user_id, value: current_user.id %>
 
   <%= f.submit %>
 

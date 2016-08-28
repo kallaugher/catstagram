@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,11 +19,15 @@
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="/">Home</a></li>
         <% if logged_in? %>
+<<<<<<< HEAD
           <li role="presentation"> <%= link_to "Log-Out", signout_path, method: :delete %> </li>
+=======
+          <li role="presentation"><%= link_to 'Sign-Out', logout_path, method: :delete %></li>
+>>>>>>> 7e35fc35dc77599a0207c6aeb3fb6677e9bdeaeb
           <li role="presentation"><a href="/photos/new">Add a Cat</a></li>
-          <li role="presentation" class="pull-right">Hi <%= link_to "#{current_user.name}".capitalize, user_path(current_user) %> </li>
+          <li role="presentation" class="pull-right"><%= link_to "Hi #{current_user.name.capitalize}", user_path(current_user) %> </li>
         <% else %>
-          <li role="presentation"><a href="/login">Log-In</a></li>
+          <li role="presentation"><a href="/signin">Sign-In</a></li>
           <li role="presentation"><a href="/signup">Sign-Up</a></li>
         <% end %>
       </ul>

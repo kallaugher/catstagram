@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :photos
   resources :users
-  
+
   root 'photos#index'
 
   get '/signin' => 'sessions#new', as: 'signin'

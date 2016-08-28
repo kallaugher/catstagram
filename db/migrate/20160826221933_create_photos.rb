@@ -5,8 +5,7 @@ class CreatePhotos < ActiveRecord::Migration[5.0]
       t.string :file
       t.integer :user_id
       t.integer :votes
-      t.attachment :image
-      
+
       t.timestamps
     end
   end
