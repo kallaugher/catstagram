@@ -5,16 +5,18 @@ class PhotosController < ApplicationController
   def index
     @photos = Photo.all
   end
-  
+
   def add_vote
     self.votes += 1
   end
-  
+
   def show
   end
 
   def new
     @photo = Photo.new
+
+    3.times {@photo.tags.build}
   end
 
   def create
@@ -29,6 +31,6 @@ class PhotosController < ApplicationController
   end
 
   def photo_params
-    params.require(:photo).permit(:image, :caption, :user_id)
+    params.require(:photo).permit(:image, :caption, :user_id, tags_attributes: [:name])
   end
 end

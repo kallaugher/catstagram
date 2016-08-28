@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'photos#index'
 
-  get '/signin' => 'sessions#new', as: 'signin'
+  get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
   delete '/signout' => 'sessions#destroy', as: 'signout'
 
