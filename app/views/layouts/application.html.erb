@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  
+
 
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -20,7 +20,6 @@
         <li role="presentation"><a href="/">Home</a></li>
         <% if logged_in? %>
           <li role="presentation"> <%= link_to "Log-Out", signout_path, method: :delete %> </li>
-
           <li role="presentation"><a href="/photos/new">Add a Cat</a></li>
           <li role="presentation" class="pull-right"><%= link_to "Hi #{current_user.name.capitalize}", user_path(current_user) %> </li>
         <% else %>

@@ -10,10 +10,12 @@
 
    
   </div>
- 
   <div class="col-md-4">
         "<%= @photo.caption %>"<br>
-        Posted by <%= @photo.user.name %><br>
+        Posted by <%= @photo.user.name %><br><br>
+        Tags: <% @photo.tags.each do |tag| %>
+          <span class="label label-default"><%= tag.name %></span>
+        <% end %><br><br>
         <%= @photo.votes %> votes<br>
   </div>
 </div>
