@@ -9,6 +9,15 @@
 
   <%= f.hidden_field :user_id, value: current_user.id %>
 
+  <%= f.label :choose_tags %>
+  <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name %><br><br>
+
+  <%= f.label :add_new_tags %>
+  <%= f.fields_for :tags do |tags_fields| %>
+    <%= tags_fields.text_field :name %>
+  <% end %>
+  <br><br>
+
   <%= f.submit %>
 
 <% end %>
