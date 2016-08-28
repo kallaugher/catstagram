@@ -9,9 +9,12 @@ class PhotosController < ApplicationController
   def add_vote
     self.votes += 1
   end
-  
+
   def show
+   count=@photo.votes+1
+   @photo.update_attributes(:votes => count)
   end
+
 
   def new
     @photo = Photo.new
