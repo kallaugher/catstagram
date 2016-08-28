@@ -8,5 +8,9 @@ class Photo < ApplicationRecord
 
   accepts_nested_attributes_for :tags
 
+	def add_vote
+    self.votes += 1
+  end
+
 
 end

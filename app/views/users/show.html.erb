@@ -1,14 +1,15 @@
-
-        <"< USER AVATAR>">
-  <div class="col-md-4">
-        "<%= @user.name %>'s"<br>
+<div class="col-md-4">
+ "<%= @user.name %>'s"<br>
         photos 
     <div class="row">
       <% @user.photos.each do |photo| %>
-        <a href="/photos/<%= photo.id %>" class="thumbnail">
-          <img src="<%= photo.file %>">
-        </a>
-      <% end %>
+    <div class="col-xs-6 col-md-3">
+      <a href="/photos/<%= photo.id %>" class="thumbnail">
+        <img src="<%= photo.image.url(:thumb) %>">
+      </a>
     </div>
+      <% end %>
   </div>
+  
+</div>
  

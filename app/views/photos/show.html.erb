@@ -4,9 +4,14 @@
     <span class="thumbnail">
       <img src="<%= @photo.image.url(:medium) %>">
     </span>
-    <class= "btn btn-default btn-lg" role="button">
-      <i class="icon-heart"></i> Vote
-    </button>
+    
+
+<%= link_to photo_path(@photo) do %> 
+<i class="icon-heart"> Vote</i>
+<%end%>
+<%=@photo.votes %>
+
+
   </div>
   <div class="col-md-4">
         "<%= @photo.caption %>"<br>
