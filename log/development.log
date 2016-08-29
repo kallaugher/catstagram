@@ -12559,3 +12559,791 @@ Processing by PhotosController#index as HTML
 Completed 200 OK in 232ms (Views: 182.8ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/users/6" for ::1 at 2016-08-29 12:05:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (24.1ms)
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 653ms (Views: 517.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/6" for ::1 at 2016-08-29 12:10:59 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (13.8ms)
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 135ms (Views: 101.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:11:36 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (4.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (31.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 100.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/photos/9" for ::1 at 2016-08-29 12:23:54 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPhoto Load (6.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTag Load (2.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (390.0ms)
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 537ms (Views: 466.7ms | ActiveRecord: 13.1ms)
+
+
+Started POST "/photos/9/add_vote" for ::1 at 2016-08-29 12:24:01 -0400
+Processing by PhotosController#add_vote as JS
+  Parameters: {"authenticity_token"=>"ne2UZtF4edokv5zCyA4Wom5S567HwgvZuyj3KJ0Orj3AwX5syUmFP1tKptVv3CpkSWRurm3C6dFP8lQkFiyDUw==", "id"=>"9"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "photos" SET "votes" = ?, "updated_at" = ? WHERE "photos"."id" = ?[0m  [["votes", 1], ["updated_at", 2016-08-29 16:24:01 UTC], ["id", 9]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos/9
+Completed 200 OK in 21ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/photos/9" for ::1 at 2016-08-29 12:24:01 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (17.2ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 88ms (Views: 82.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/5" for ::1 at 2016-08-29 12:24:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (5.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (37.8ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 242ms (Views: 198.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/photos/10" for ::1 at 2016-08-29 12:24:11 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (23.4ms)
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 83ms (Views: 72.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos/10/edit" for ::1 at 2016-08-29 12:24:12 -0400
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering photos/edit.html.erb within layouts/application
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 10]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 10]]
+  Rendered photos/edit.html.erb within layouts/application (124.3ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 167ms (Views: 156.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:24:16 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (12.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 60.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/8" for ::1 at 2016-08-29 12:24:23 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 8]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (12.7ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 53ms (Views: 47.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:24:36 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (10.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 157ms (Views: 142.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/8" for ::1 at 2016-08-29 12:24:57 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 8]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (44.8ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 127ms (Views: 119.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/photos/8/add_vote" for ::1 at 2016-08-29 12:25:10 -0400
+Processing by PhotosController#add_vote as JS
+  Parameters: {"authenticity_token"=>"077z4VnHvUaLrfpl9iuLX3GtnlIUC7ogHVoB2QrmJPhdVEHygGGKi/cz8C1bz+jGBgNte/zV68s8uZPU6OL+VQ==", "id"=>"8"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (5.3ms)[0m  [1m[33mUPDATE "photos" SET "votes" = ?, "updated_at" = ? WHERE "photos"."id" = ?[0m  [["votes", 15], ["updated_at", 2016-08-29 16:25:10 UTC], ["id", 8]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos/8
+Completed 200 OK in 22ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/photos/8" for ::1 at 2016-08-29 12:25:10 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 8]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (21.7ms)
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 88ms (Views: 81.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/4" for ::1 at 2016-08-29 12:25:13 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 47.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:25:20 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (11.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/3" for ::1 at 2016-08-29 12:25:21 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (13.3ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 60ms (Views: 55.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for ::1 at 2016-08-29 12:25:22 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.2ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 40.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:25:26 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (16.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 69.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/8" for ::1 at 2016-08-29 12:25:29 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 8]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (13.3ms)
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 61ms (Views: 55.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/5" for ::1 at 2016-08-29 12:25:34 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (6.7ms)
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 43.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos/10" for ::1 at 2016-08-29 12:25:35 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (15.2ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 52ms (Views: 47.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos/10/edit" for ::1 at 2016-08-29 12:25:37 -0400
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering photos/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 10]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 10]]
+  Rendered photos/edit.html.erb within layouts/application (14.2ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 44ms (Views: 35.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:25:44 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (9.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 48.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/10" for ::1 at 2016-08-29 12:27:03 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (41.3ms)
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 173ms (Views: 137.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:27:12 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (56.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 179ms (Views: 173.6ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/signout" for ::1 at 2016-08-29 12:27:15 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hu9lI34I/BxhBV1nbHhYyH2EvASX1hbndkJPUWsk6OquKrStMvRIA3B3S/wJ8OrFNnutHLLgmTaKN/bQYNMW3Q=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:27:15 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (6.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/signin" for ::1 at 2016-08-29 12:28:47 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (15.2ms)
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 156ms (Views: 137.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/signin" for ::1 at 2016-08-29 12:28:52 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FNYLL1G3xAmNI1xNxQYrZ2qFj5nzLPvxrpmW4NGcrHPslLQQJ1DveVcgFT5ikzayc6a7gFeItUao/7o5bnrT2w==", "name"=>"Alice", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Alice"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 40ms (Views: 30.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signup" for ::1 at 2016-08-29 12:28:54 -0400
+Processing by RegistrationsController#new as HTML
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (17.2ms)
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 55ms (Views: 46.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signup" for ::1 at 2016-08-29 12:29:25 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OZZgS0s5EFQ0GBIlQryEAwqMBkAUVYtQ4P4+z4FbcUIyEdQK0P1aGcdlw8+Vc1qooNKA4YiFhd1bPW3JmA9vCg==", "user"=>{"name"=>"Alice", "bio"=>"cats are super great", "password"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc95a360a30 @tempfile=#<Tempfile:/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/RackMultipart20160829-67905-1tyk9ts.jpg>, @original_filename="alice.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"alice.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create User"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/6384e2b2184bcbf58eccf10ca7a6563c20160829-67905-bk21ga.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/6384e2b2184bcbf58eccf10ca7a6563c20160829-67905-bk21ga.jpg[0]'
+Command :: convert '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/6384e2b2184bcbf58eccf10ca7a6563c20160829-67905-bk21ga.jpg[0]' -auto-orient -resize "640" '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/c5bf91a2ff4b51fdc320091ab296679d20160829-67905-5gl1fr'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/6384e2b2184bcbf58eccf10ca7a6563c20160829-67905-bk21ga.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/6384e2b2184bcbf58eccf10ca7a6563c20160829-67905-bk21ga.jpg[0]'
+Command :: convert '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/6384e2b2184bcbf58eccf10ca7a6563c20160829-67905-bk21ga.jpg[0]' -auto-orient -resize "200x" -crop "200x200+0+0" +repage '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/c5bf91a2ff4b51fdc320091ab296679d20160829-67905-wc29m8'
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/6384e2b2184bcbf58eccf10ca7a6563c20160829-67905-1f6z30d.jpg'
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "created_at", "updated_at", "password_digest", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alice"], ["bio", "cats are super great"], ["created_at", 2016-08-29 16:29:25 UTC], ["updated_at", 2016-08-29 16:29:25 UTC], ["password_digest", "$2a$10$ERJh.L0n0bY84wBkmSVCrOWdjhETkYmoR8PzI3Kiq7UkjhovY83Ni"], ["image_file_name", "alice.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 41490], ["image_updated_at", 2016-08-29 16:29:25 UTC]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 515ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/photos" for ::1 at 2016-08-29 12:29:25 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (18.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 130ms (Views: 118.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/7" for ::1 at 2016-08-29 12:29:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 7]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 52.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/photos/new" for ::1 at 2016-08-29 12:29:29 -0400
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  Rendered photos/_form.html.erb (26.0ms)
+  Rendered photos/new.html.erb within layouts/application (31.9ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 89ms (Views: 60.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/photos" for ::1 at 2016-08-29 12:31:17 -0400
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ee6CGN1c5bOLeoIhhnJHolhZah6WUz3CIj8HrUe2T4lfQ4Xsv8fr5SogR+QjF8hiARfDYDH3C4dRaeZXPI1iSg==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fc95262e670 @tempfile=#<Tempfile:/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/RackMultipart20160829-67905-fkgw71.png>, @original_filename="Screen Shot 2016-08-29 at 12.30.36 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"Screen Shot 2016-08-29 at 12.30.36 PM.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"is this a cat?", "user_id"=>"7", "tag_ids"=>[""], "tags_attributes"=>{"0"=>{"name"=>"not a cat"}, "1"=>{"name"=>""}, "2"=>{"name"=>""}}}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/49f3facd5f41b4e590a3512ce33c0dff20160829-67905-1yqwh1g.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/49f3facd5f41b4e590a3512ce33c0dff20160829-67905-1yqwh1g.png[0]'
+Command :: convert '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/49f3facd5f41b4e590a3512ce33c0dff20160829-67905-1yqwh1g.png[0]' -auto-orient -resize "x400" -crop "400x400+0+0" +repage '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/eff775bc5053f2777c29ce8e79dd29c320160829-67905-17auri0'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/49f3facd5f41b4e590a3512ce33c0dff20160829-67905-1yqwh1g.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/49f3facd5f41b4e590a3512ce33c0dff20160829-67905-1yqwh1g.png[0]'
+Command :: convert '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/49f3facd5f41b4e590a3512ce33c0dff20160829-67905-1yqwh1g.png[0]' -auto-orient -resize "640" '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/eff775bc5053f2777c29ce8e79dd29c320160829-67905-g9u1hm'
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE 1=0[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Command :: file -b --mime '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/1dc3a9454412417195367422adad1cfb20160829-67905-1s0pwd1.png'
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "photos" ("caption", "user_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["caption", "is this a cat?"], ["user_id", 7], ["created_at", 2016-08-29 16:31:18 UTC], ["updated_at", 2016-08-29 16:31:18 UTC], ["image_file_name", "Screen_Shot_2016-08-29_at_12.30.36_PM.png"], ["image_content_type", "image/png"], ["image_file_size", 246827], ["image_updated_at", 2016-08-29 16:31:17 UTC]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "not a cat"], ["created_at", 2016-08-29 16:31:18 UTC], ["updated_at", 2016-08-29 16:31:18 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photo_tags" ("tag_id", "photo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 23], ["photo_id", 14], ["created_at", 2016-08-29 16:31:18 UTC], ["updated_at", 2016-08-29 16:31:18 UTC]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos/14
+Completed 302 Found in 1106ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/photos/14" for ::1 at 2016-08-29 12:31:18 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (28.2ms)
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 158ms (Views: 143.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:31:24 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (16.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 101ms (Views: 82.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos/9" for ::1 at 2016-08-29 12:33:09 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPhoto Load (3.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 9]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (38.4ms)
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 187ms (Views: 137.3ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/photos/9/add_vote" for ::1 at 2016-08-29 12:33:12 -0400
+Processing by PhotosController#add_vote as JS
+  Parameters: {"authenticity_token"=>"0EPGWc8VE9S1CWgJeJx+4zeOYCCrmdLAOApQcnMVi/iNbyxT1yTvMcr8Uh7fTkIlELjpIAGZMMjM0PN++Demlg==", "id"=>"9"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (5.8ms)[0m  [1m[33mUPDATE "photos" SET "votes" = ?, "updated_at" = ? WHERE "photos"."id" = ?[0m  [["votes", 2], ["updated_at", 2016-08-29 16:33:12 UTC], ["id", 9]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos/9
+Completed 200 OK in 22ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/photos/9" for ::1 at 2016-08-29 12:33:12 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (13.6ms)
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 182ms (Views: 176.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:34:13 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (12.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 133ms (Views: 119.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/photos/14" for ::1 at 2016-08-29 12:34:51 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (46.9ms)
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 130ms (Views: 120.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos/14/edit" for ::1 at 2016-08-29 12:35:00 -0400
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering photos/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 14]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 14]]
+  Rendered photos/edit.html.erb within layouts/application (34.6ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 120ms (Views: 106.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:35:05 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (13.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 60.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/signout" for ::1 at 2016-08-29 12:36:08 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bA2HZ6wb9hPu3PI3unaST4pyVhyJRnoW/MKQ+L6dMENEyFbp4OdCDP+u5Kzf/iBCwY1HBKxw9ccAtyl5tWrOdA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:36:08 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (1.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (28.1ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 155ms (Views: 142.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/signin" for ::1 at 2016-08-29 12:36:10 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.3ms)
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 74ms (Views: 69.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signin" for ::1 at 2016-08-29 12:36:14 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d+Reo5iXd6qQBvdhLOJtRrAuAvLtMQSVa3p7eUSgCgmPpuGc7nBc2koFvhKLd3CTqQ0260mVSiJtHFeg+0Z1oQ==", "name"=>"Dillon", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Dillon"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 95ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2016-08-29 12:36:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 65.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/photos/new" for ::1 at 2016-08-29 12:36:18 -0400
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  Rendered photos/_form.html.erb (20.4ms)
+  Rendered photos/new.html.erb within layouts/application (26.1ms)
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 90ms (Views: 56.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/photos" for ::1 at 2016-08-29 12:36:26 -0400
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0M5slLCXiq2O9EqWbEzpn0GnaY6pRVObRfeS7w+D4/P2Y2tg0gyE+y+uj1PJKWZfGOnA8A7hZd42oXMVdLjOMA==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fc959761130 @tempfile=#<Tempfile:/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/RackMultipart20160829-67905-lisw2n.jpg>, @original_filename="xyla.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"xyla.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"", "user_id"=>"4", "tag_ids"=>[""], "tags_attributes"=>{"0"=>{"name"=>""}, "1"=>{"name"=>""}, "2"=>{"name"=>""}}}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/66bbf2d1a6e96a930fb7d35ce04cbb6d20160829-67905-134pv5z.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/66bbf2d1a6e96a930fb7d35ce04cbb6d20160829-67905-134pv5z.jpg[0]'
+Command :: convert '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/66bbf2d1a6e96a930fb7d35ce04cbb6d20160829-67905-134pv5z.jpg[0]' -auto-orient -resize "x400" -crop "400x400+3+0" +repage '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/c05d9f28dcee7e826a5a07f5e3c9bfd920160829-67905-r1k6pm'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/66bbf2d1a6e96a930fb7d35ce04cbb6d20160829-67905-134pv5z.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/66bbf2d1a6e96a930fb7d35ce04cbb6d20160829-67905-134pv5z.jpg[0]'
+Command :: convert '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/66bbf2d1a6e96a930fb7d35ce04cbb6d20160829-67905-134pv5z.jpg[0]' -auto-orient -resize "640" '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/c05d9f28dcee7e826a5a07f5e3c9bfd920160829-67905-1gob7xl'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE 1=0[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Command :: file -b --mime '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/66bbf2d1a6e96a930fb7d35ce04cbb6d20160829-67905-122wkwk.jpg'
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "photos" ("caption", "user_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["caption", ""], ["user_id", 4], ["created_at", 2016-08-29 16:36:26 UTC], ["updated_at", 2016-08-29 16:36:26 UTC], ["image_file_name", "xyla.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 104849], ["image_updated_at", 2016-08-29 16:36:26 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos/15
+Completed 302 Found in 427ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/photos/15" for ::1 at 2016-08-29 12:36:26 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (29.2ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 127ms (Views: 121.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/photos/15/edit" for ::1 at 2016-08-29 12:36:28 -0400
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering photos/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 15]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 15]]
+  Rendered photos/edit.html.erb within layouts/application (22.3ms)
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 69ms (Views: 56.7ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/photos/15" for ::1 at 2016-08-29 12:36:39 -0400
+Processing by PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nMB+wuuJBeh+NUFQZlzm42s+oqTwzL8iDxobwWZVIOS0Ba9Mp3Wx929HV8sD1FTuIMGzvNX6MPPzb6JAbaLe0w==", "photo"=>{"caption"=>"so inquisitive", "tag_ids"=>["", "5"], "tags_attributes"=>{"0"=>{"name"=>"xyla"}, "1"=>{"name"=>""}, "2"=>{"name"=>""}}}, "commit"=>"Update Photo", "id"=>"15"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = 5[0m
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 15]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photo_tags" ("tag_id", "photo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 5], ["photo_id", 15], ["created_at", 2016-08-29 16:36:39 UTC], ["updated_at", 2016-08-29 16:36:39 UTC]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "photos" SET "caption" = ?, "updated_at" = ? WHERE "photos"."id" = ?[0m  [["caption", "so inquisitive"], ["updated_at", 2016-08-29 16:36:39 UTC], ["id", 15]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "xyla"], ["created_at", 2016-08-29 16:36:39 UTC], ["updated_at", 2016-08-29 16:36:39 UTC]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "photo_tags" ("tag_id", "photo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 24], ["photo_id", 15], ["created_at", 2016-08-29 16:36:39 UTC], ["updated_at", 2016-08-29 16:36:39 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos/15
+Completed 302 Found in 41ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/photos/15" for ::1 at 2016-08-29 12:36:39 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (14.4ms)
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 67ms (Views: 60.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/photos/new" for ::1 at 2016-08-29 12:36:42 -0400
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  Rendered photos/_form.html.erb (32.0ms)
+  Rendered photos/new.html.erb within layouts/application (36.5ms)
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 125ms (Views: 99.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/photos" for ::1 at 2016-08-29 12:36:49 -0400
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cjXZEHjUEZZzjo6zpuenZ4nwZFE+RbuzOX4HLtsmNt1UmN7kGk8fwNLUS3YDgiin0L7NL5nhjfZKKObUoB0bHg==", "photo"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fc953394f08 @tempfile=#<Tempfile:/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/RackMultipart20160829-67905-1xsi9kt.jpg>, @original_filename="maeby2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"maeby2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"", "user_id"=>"4", "tag_ids"=>[""], "tags_attributes"=>{"0"=>{"name"=>""}, "1"=>{"name"=>""}, "2"=>{"name"=>""}}}, "commit"=>"Create Photo"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/9092fffa78f37333f6c69b1a5b16911020160829-67905-133wee6.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/9092fffa78f37333f6c69b1a5b16911020160829-67905-133wee6.jpg[0]'
+Command :: convert '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/9092fffa78f37333f6c69b1a5b16911020160829-67905-133wee6.jpg[0]' -auto-orient -resize "x400" -crop "400x400+39+0" +repage '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/e06ac55a227143c42f8a5b6f42d5ac6220160829-67905-oitm0p'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/9092fffa78f37333f6c69b1a5b16911020160829-67905-133wee6.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/9092fffa78f37333f6c69b1a5b16911020160829-67905-133wee6.jpg[0]'
+Command :: convert '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/9092fffa78f37333f6c69b1a5b16911020160829-67905-133wee6.jpg[0]' -auto-orient -resize "640" '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/e06ac55a227143c42f8a5b6f42d5ac6220160829-67905-qpbjvu'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE 1=0[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Command :: file -b --mime '/var/folders/87/nhzw5wt92zvfplj672cwdjqm0000gn/T/9092fffa78f37333f6c69b1a5b16911020160829-67905-tvmu9z.jpg'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("caption", "user_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["caption", ""], ["user_id", 4], ["created_at", 2016-08-29 16:36:49 UTC], ["updated_at", 2016-08-29 16:36:49 UTC], ["image_file_name", "maeby2.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 74041], ["image_updated_at", 2016-08-29 16:36:49 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos/16
+Completed 302 Found in 302ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/photos/16" for ::1 at 2016-08-29 12:36:49 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 16]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (11.5ms)
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 63ms (Views: 57.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/photos/16/edit" for ::1 at 2016-08-29 12:36:51 -0400
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering photos/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 16]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 16]]
+  Rendered photos/edit.html.erb within layouts/application (15.1ms)
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 48ms (Views: 39.8ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/photos/16" for ::1 at 2016-08-29 12:37:34 -0400
+Processing by PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ba89sUKgr1ZVBKkmhm8IY72U3lUVlqHjXr/rs1mEl3otauw/DlwbSUR2v73j57pu9mvPTTCgLjKiylIyUnNpTQ==", "photo"=>{"caption"=>"crouching tiger, hidden cat", "tag_ids"=>["", "5", "10"], "tags_attributes"=>{"0"=>{"name"=>""}, "1"=>{"name"=>""}, "2"=>{"name"=>""}}}, "commit"=>"Update Photo", "id"=>"16"}
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" IN (5, 10)[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 16]]
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "photo_tags" ("tag_id", "photo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 5], ["photo_id", 16], ["created_at", 2016-08-29 16:37:34 UTC], ["updated_at", 2016-08-29 16:37:34 UTC]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "photo_tags" ("tag_id", "photo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["tag_id", 10], ["photo_id", 16], ["created_at", 2016-08-29 16:37:34 UTC], ["updated_at", 2016-08-29 16:37:34 UTC]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "photos" SET "caption" = ?, "updated_at" = ? WHERE "photos"."id" = ?[0m  [["caption", "crouching tiger, hidden cat"], ["updated_at", 2016-08-29 16:37:34 UTC], ["id", 16]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos/16
+Completed 302 Found in 91ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/photos/16" for ::1 at 2016-08-29 12:37:34 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (29.4ms)
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 166ms (Views: 155.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:37:38 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (19.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 57.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 12:37:43 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (11.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 64.9ms | ActiveRecord: 0.7ms)
+
+
