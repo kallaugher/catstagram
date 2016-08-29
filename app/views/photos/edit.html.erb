@@ -19,10 +19,10 @@
 
   <%= f.label :add_new_tags %>
   <%= f.fields_for :tags do |tags_fields| %>
-    <%= tags_fields.text_field :name %>
+    <%= tags_fields.text_field :name, value: nil %>
   <% end %>
   <br><br>
-  
+
   <%= f.submit %>
 
 <% end %>

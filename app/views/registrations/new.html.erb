@@ -1,10 +1,12 @@
 <%= form_for @user, url: signup_path do |f| %>
 <%= f.label :name %>
-<%= f.text_field :name %>  
+<%= f.text_field :name %><br>
 <%= f.label :bio %>
-<%= f.text_field :bio %>
+<%= f.text_field :bio %><br>
 <%= f.label :password %>
-<%= f.password_field :password %>
+<%= f.password_field :password %><br>
+<%= f.label :add_avatar %>
+<%= f.file_field :image %><br>
 
 
 <%= f.submit "Create User" %>

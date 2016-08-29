@@ -1,6 +1,11 @@
 <h2>User Profile</h2>
-<b>Name:</b> <%= @user.name %><br>
-<b>Bio:</b> <%= @user.bio %>
+<div class="row">
+  <div class="col-md-3">
+    <img src="<%= @user.image.url(:thumb) %>" class="thumbnail">
+    <b>Name:</b> <%= @user.name %><br>
+    <b>Bio:</b> <%= @user.bio %>
+  </div>
+</div>
 
 <h3><%= @user.name %>'s Photos</h3>
 <div class="row">
