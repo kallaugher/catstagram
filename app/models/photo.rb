@@ -6,7 +6,7 @@ class Photo < ApplicationRecord
   has_attached_file :image, styles: { medium: "640x", thumb: "400x400#" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
-  accepts_nested_attributes_for :tags
+  accepts_nested_attributes_for :tags, reject_if: proc { |attributes| attributes['name'].blank? }
 
 	def add_vote
     self.votes += 1
