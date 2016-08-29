@@ -4,8 +4,10 @@
     <span class="thumbnail">
       <img src="<%= @photo.image.url(:medium) %>">
     </span>
-  <%= link_to "Vote", photo_vote_path(:id => @photo.id), method: :post%>
-    <i class="icon-heart"></i>
+
+    <%= button_to photo_vote_path(id: @photo.id), {remote: true, class: "btn btn-default"} do %>
+       <i class="icon-heart"></i> Vote
+    <% end %>
   </div>
 
 <div class="col-md-4">
