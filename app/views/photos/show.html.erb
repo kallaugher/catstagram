@@ -18,8 +18,9 @@
       <span class="label label-default"><%= tag.name %></span>
     <% end %><br><br>
     <%= @photo.votes %> votes<br><br>
-    <%= link_to 'Edit Photo', edit_photo_path(@photo) %>
-
+    <% if current_user == @photo.user %>
+      <%= button_to 'Edit Photo', edit_photo_path(@photo), {class: "btn btn-default"} %>
+    <% end %>
   </div>
 
 </div>
