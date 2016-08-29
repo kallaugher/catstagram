@@ -1,4 +1,5 @@
 <div class="row">
+
   <div class="col-md-2"></div>
   <div class="col-xs-6 col-md-3">
     <span class="thumbnail">
@@ -10,12 +11,13 @@
     <% end %>
   </div>
 
-<div class="col-md-4">
-  "<%= @photo.caption %>"<br>
-  Posted by <%= link_to @photo.user.name, user_path(@photo.user) %><br><br>
-  Tags: <% @photo.tags.each do |tag| %>
-    <span class="label label-default"><%= tag.name %></span>
-  <% end %><br><br>
-  <%= @photo.votes %> votes<br>
+  <div class="col-md-4">
+    "<%= @photo.caption %>"<br>
+    Posted by <%= link_to @photo.user.name, user_path(@photo.user) %><br><br>
+    Tags: <% @photo.tags.each do |tag| %>
+      <span class="label label-default"><%= tag.name %></span>
+    <% end %><br><br>
+    <%= @photo.votes %> votes<br>
   </div>
+  
 </div>
