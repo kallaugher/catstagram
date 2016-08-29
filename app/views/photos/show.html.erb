@@ -19,7 +19,7 @@
     <% end %><br><br>
     <%= @photo.votes %> votes<br><br>
     <% if current_user == @photo.user %>
-      <%= button_to 'Edit Photo', edit_photo_path(@photo), {class: "btn btn-default"} %><br>
+      <%= button_to 'Edit Photo', edit_photo_path(@photo), {class: "btn btn-default", method: "get"} %><br>
       <%= button_to "Delete Photo", @photo, {method: :delete, data: {confirm: "Really?"}, class: "btn btn-default"} %>
     <% end %>
 

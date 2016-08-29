@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160827232713) do
+ActiveRecord::Schema.define(version: 20160829134258) do
 
   create_table "photo_tags", force: :cascade do |t|
     t.integer  "tag_id"
@@ -42,9 +42,13 @@ ActiveRecord::Schema.define(version: 20160827232713) do
     t.string   "name"
     t.string   "bio"
     t.string   "photo"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "password_digest"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end
