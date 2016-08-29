@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :set_photo, only: :show
+  before_action :set_photo, only: [:show, :edit, :update]
   before_action :authorize_user, only:[:new, :create, :edit, :update, :destroy]
 
   def index
@@ -21,12 +21,20 @@ class PhotosController < ApplicationController
 
   def new
     @photo = Photo.new
-
     3.times {@photo.tags.build}
   end
 
   def create
     @photo = Photo.create(photo_params)
+    redirect_to photo_path(@photo)
+  end
+
+  def edit
+    3.times {@photo.tags.build}
+  end
+
+  def update
+    @photo.update(photo_params)
     redirect_to photo_path(@photo)
   end
 

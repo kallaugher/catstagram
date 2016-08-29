@@ -17,7 +17,9 @@
     Tags: <% @photo.tags.each do |tag| %>
       <span class="label label-default"><%= tag.name %></span>
     <% end %><br><br>
-    <%= @photo.votes %> votes<br>
+    <%= @photo.votes %> votes<br><br>
+    <%= link_to 'Edit Photo', edit_photo_path(@photo) %>
+
   </div>
-  
+
 </div>
