@@ -6,7 +6,6 @@ class PhotosController < ApplicationController
     @photos = Photo.all
   end
 
-  
 
   def add_vote
    @photo = Photo.find(params[:id])
@@ -14,11 +13,10 @@ class PhotosController < ApplicationController
    @photo.update_attributes(:votes => count)
 
    redirect_to photo_path(@photo)
-
   end
 
-   def show
-   end
+  def show
+  end
 
   def new
     @photo = Photo.new
