@@ -12152,3 +12152,203 @@ Processing by RegistrationsController#new as HTML
 Completed 200 OK in 37ms (Views: 27.4ms | ActiveRecord: 0.1ms)
 
 
+Started POST "/signup" for ::1 at 2016-08-29 13:50:01 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"536rQ8GGbHE8dtu91W3Ks3DvTEhCkh/7BD5BOKRqLZli6096yshlCXHNYoQ3AM9iSCdZIxmOOV72/l/o30YmCw==", "user"=>{"name"=>"cassy", "bio"=>"sis cat", "password"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc8c076f9e0 @tempfile=#<Tempfile:/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/RackMultipart20160829-14318-p2ryvg.jpg>, @original_filename="cliff dive.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"cliff dive.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create User"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-zje7u1.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-zje7u1.jpg[0]'
+Command :: convert '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-zje7u1.jpg[0]' -auto-orient -resize "640" '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/51de1fa077004cc816788998809f029d20160829-14318-1467irs'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-zje7u1.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-zje7u1.jpg[0]'
+Command :: convert '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-zje7u1.jpg[0]' -auto-orient -resize "x200" -crop "200x200+51+0" +repage '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/51de1fa077004cc816788998809f029d20160829-14318-1gk05uq'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/03b375e454bcd301334cee641789b41220160829-14318-xfaje8.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "created_at", "updated_at", "password_digest", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cassy"], ["bio", "sis cat"], ["created_at", 2016-08-29 17:50:02 UTC], ["updated_at", 2016-08-29 17:50:02 UTC], ["password_digest", "$2a$10$v9RD/51BKzpHlPJw57Q.L.lMl8XJrcXd/YuEuy0SAUdvLmt0UwaOm"], ["image_file_name", "cliff_dive.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 85805], ["image_updated_at", 2016-08-29 17:50:01 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 800ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/photos" for ::1 at 2016-08-29 13:50:02 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for ::1 at 2016-08-29 13:50:07 -0400
+Processing by RegistrationsController#new as HTML
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (2.3ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signup" for ::1 at 2016-08-29 13:50:14 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yd2qUNPPt6yX0WPEYUuNfB1plUFR144AGU0IH5+uyxy4gwAqrwgB+w3ygw0gtIl+PSS72GafS9gcg+QtnxuQFQ==", "user"=>{"name"=>"cassy", "bio"=>"sis cat", "password"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc8c33d0d18 @tempfile=#<Tempfile:/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/RackMultipart20160829-14318-14503pr.jpg>, @original_filename="cliff dive.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"cliff dive.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create User"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-1m83z22.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-1m83z22.jpg[0]'
+Command :: convert '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-1m83z22.jpg[0]' -auto-orient -resize "640" '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/9fbecc106a0945418f66802c7b8a1e3920160829-14318-8sfqan'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-1m83z22.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-1m83z22.jpg[0]'
+Command :: convert '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-1m83z22.jpg[0]' -auto-orient -resize "x200" -crop "200x200+51+0" +repage '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/9fbecc106a0945418f66802c7b8a1e3920160829-14318-12srm8b'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/03b375e454bcd301334cee641789b41220160829-14318-1eilimv.jpg'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering registrations/new.html.erb within layouts/application
+  Rendered registrations/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 392ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, url: signup_path do |f| %>
+    2: <%= f.label :name %>
+    3: <%= f.text_field :name %><br>
+    4: <%= f.label :bio %>
+  
+app/views/registrations/new.html.erb:1:in `_app_views_registrations_new_html_erb__1475466813370592189_70250124520020'
+app/controllers/registrations_controller.rb:13:in `create'
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/cregis/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.6ms)
+Started POST "/signup" for ::1 at 2016-08-29 13:50:26 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yd2qUNPPt6yX0WPEYUuNfB1plUFR144AGU0IH5+uyxy4gwAqrwgB+w3ygw0gtIl+PSS72GafS9gcg+QtnxuQFQ==", "user"=>{"name"=>"cassy", "bio"=>"sis cat", "password"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc8bc123b08 @tempfile=#<Tempfile:/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/RackMultipart20160829-14318-1qkecoz.jpg>, @original_filename="cliff dive.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"cliff dive.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create User"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-12ce9eq.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-12ce9eq.jpg[0]'
+Command :: convert '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-12ce9eq.jpg[0]' -auto-orient -resize "640" '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/300865044727cdc7e1ad3652ff83f1b520160829-14318-14c10uz'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-12ce9eq.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-12ce9eq.jpg[0]'
+Command :: convert '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/126a1de1dfe72d7e9126e91a62703d0920160829-14318-12ce9eq.jpg[0]' -auto-orient -resize "x200" -crop "200x200+51+0" +repage '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/300865044727cdc7e1ad3652ff83f1b520160829-14318-13izukp'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/d2/36c_755s3152qg9d93hl4tsw0000gn/T/03b375e454bcd301334cee641789b41220160829-14318-gqfnn5.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "created_at", "updated_at", "password_digest", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cassy"], ["bio", "sis cat"], ["created_at", 2016-08-29 17:50:26 UTC], ["updated_at", 2016-08-29 17:50:26 UTC], ["password_digest", "$2a$10$B4XKaUPu7QdtfTodFeuqjObf8ZHxczaHW6cJqXoCqHv6oWRGvkJKS"], ["image_file_name", "cliff_dive.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 85805], ["image_updated_at", 2016-08-29 17:50:26 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 483ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/photos" for ::1 at 2016-08-29 13:50:26 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (2.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/4" for ::1 at 2016-08-29 13:50:33 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 46ms (Views: 37.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2016-08-29 13:50:37 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 33.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/4" for ::1 at 2016-08-29 13:50:44 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fp5fFBTHjHBqd+iGukeKJTBgEwLA69uEdYMTxFtAMR4PwPVuaAA6J/BUCE/7uI4nEC09m/ejHlxwTf/2W/VqFw==", "user"=>{"name"=>"cassy", "bio"=>"sis cat as cool"}, "commit"=>"Edit User", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "bio" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["bio", "sis cat as cool"], ["updated_at", 2016-08-29 17:50:44 UTC], ["id", 4]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 12ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/4" for ::1 at 2016-08-29 13:50:44 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/1" for ::1 at 2016-08-29 13:50:48 -0400
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "photo_tags" ON "tags"."id" = "photo_tags"."tag_id" WHERE "photo_tags"."photo_id" = ?[0m  [["photo_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/show.html.erb within layouts/application (78.7ms)
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 113ms (Views: 106.6ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/signout" for ::1 at 2016-08-29 13:50:53 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Um4zqxUSh/2yxonmNZ6KUc2lxxJflHJHfUs50T+jIyQjMJnRadUxqijlaS90YY5T7ejpi2jct594hdXjPxZ4LQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 13:50:53 -0400
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (1.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for ::1 at 2016-08-29 13:50:56 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 40ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/signin" for ::1 at 2016-08-29 13:51:03 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"01lQQ26+t/eXNVS3lBIaKAXfTiYB6ohUW9lu5hDC6vHltpc35cOTRRgp48iLxVd04+X6ADTz4yWSoryGspO/fQ==", "name"=>"cassy", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "cassy"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 84ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for ::1 at 2016-08-29 13:51:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
