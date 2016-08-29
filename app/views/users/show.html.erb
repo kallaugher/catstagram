@@ -1,15 +1,14 @@
-<div class="col-md-4">
- "<%= @user.name %>'s"<br>
-        photos 
-    <div class="row">
-      <% @user.photos.each do |photo| %>
+<h2>User Profile</h2>
+<b>Name:</b> <%= @user.name %><br>
+<b>Bio:</b> <%= @user.bio %>
+
+<h3><%= @user.name %>'s Photos</h3>
+<div class="row">
+  <% @user.photos.each do |photo| %>
     <div class="col-xs-6 col-md-3">
       <a href="/photos/<%= photo.id %>" class="thumbnail">
         <img src="<%= photo.image.url(:thumb) %>">
       </a>
     </div>
-      <% end %>
-  </div>
-  
+  <% end %>
 </div>
- 

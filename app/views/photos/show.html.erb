@@ -1,20 +1,28 @@
 <div class="row">
+
   <div class="col-md-2"></div>
   <div class="col-xs-6 col-md-3">
     <span class="thumbnail">
       <img src="<%= @photo.image.url(:medium) %>">
     </span>
-  <%= link_to "Vote", photo_vote_path(:id => @photo.id), method: :post%>
-    <i class="icon-heart" > </i>
-  <%=@photo.votes %>
+
+    <%= button_to photo_vote_path(id: @photo.id), {remote: true, class: "btn btn-default"} do %>
+       <i class="icon-heart"></i> Vote
+    <% end %>
   </div>
 
   <div class="col-md-4">
     "<%= @photo.caption %>"<br>
-    Posted by <%= @photo.user.name %><br><br>
+    Posted by <%= link_to @photo.user.name, user_path(@photo.user) %><br><br>
     Tags: <% @photo.tags.each do |tag| %>
       <span class="label label-default"><%= tag.name %></span>
     <% end %><br><br>
-    <%= @photo.votes %> votes<br>
+    <%= @photo.votes %> votes<br><br>
+    <% if current_user == @photo.user %>
+      <%= button_to 'Edit Photo', edit_photo_path(@photo), {class: "btn btn-default"} %><br>
+      <%= button_to "Delete Photo", @photo, {method: :delete, data: {confirm: "Really?"}, class: "btn btn-default"} %>
+    <% end %>
+
   </div>
+
 </div>

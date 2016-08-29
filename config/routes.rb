@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
   post '/signup', to: 'registrations#create'
   post 'photos/:id/add_vote' => 'photos#add_vote', :as => :photo_vote
+  get 'photos/top_cat' => 'photos#top_cat', as: 'topcat'
 end
