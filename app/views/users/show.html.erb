@@ -5,8 +5,12 @@
   </div>
   <div class="col-md-3">
     <b>Name:</b> <%= @user.name %><br>
-    <b>Bio:</b> <%= @user.bio %>
+    <b>Bio:</b> <%= @user.bio %><br><br>
+    <% if current_user == @user %>
+      <%= button_to 'Edit My Profile', edit_user_path(@user), {class: "btn btn-default", method: "get"} %>
+    <% end %>
   </div>
+
 </div>
 
 <h3><%= @user.name %>'s Photos</h3>
@@ -18,8 +22,6 @@
       </a>
     </div>
   <% end %>
-  <% if current_user == @user %>
-    <%= button_to 'Edit My Profile', edit_user_path(@user), {class: "btn btn-default", method: "get"} %>
-  <% end %>
+
 
 </div>
