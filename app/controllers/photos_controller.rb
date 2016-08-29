@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :set_photo, only: [:show, :edit, :update]
+  before_action :set_photo, only: [:show, :edit, :update, :destroy]
   before_action :authorize_user, only:[:new, :create, :edit, :update, :destroy]
 
   def index
@@ -36,6 +36,11 @@ class PhotosController < ApplicationController
   def update
     @photo.update(photo_params)
     redirect_to photo_path(@photo)
+  end
+
+  def destroy
+    @photo.destroy
+    redirect_to photos_path
   end
 
   private
